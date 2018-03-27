@@ -3,14 +3,21 @@
 
 		{% for childPage in Page.Pages %}
             <li{% if childPage.Current == 'true' %} class="active"{% endif%}>
-				<a href="{{ childPage.Url }}">{{ childPage.Title }}</a>
+				<a href="{{ childPage.Url }}">
+                    {{ childPage.Title }}
+                    {% if childPage.DisplayChildPages == 'true' and childPage.Pages != empty %}
+                        <b class="fa fa-caret-down dropdown-toggle" data-toggle="dropdown"></b>
+                    {% endif %}
+                </a>
 
                 {% if childPage.DisplayChildPages == 'true' and childPage.Pages != empty %}
-                    <div class="dropdown-menu">
+                    <ul class="dropdown-menu">
                         {% for grandchildPage in childPage.Pages %}
-                            <a class="dropdown-item" href="{{ grandchildPage.Url }}">{{ grandchildPage.Title }}</a>
+                            <li>
+                                <a class="dropdown-item" href="{{ grandchildPage.Url }}">{{ grandchildPage.Title }}</a>
+                            </li>
                         {% endfor %}
-                    </div>
+                    </ul>
                 {% endif %}
 
             </li>
