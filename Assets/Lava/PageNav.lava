@@ -4,6 +4,15 @@
 		{% for childPage in Page.Pages %}
             <li{% if childPage.Current == 'true' %} class="active"{% endif%}>
 				<a href="{{ childPage.Url }}">{{ childPage.Title }}</a>
+
+                {% if childPage.DisplayChildPages == 'true' and childPage.Pages != empty %}
+                    <div class="dropdown-menu">
+                        {% for grandchildPage in childPage.Pages %}
+                            <a class="dropdown-item" href="{{ grandchildPage.Url }}">{{ grandchildPage.Title }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
             </li>
         {% endfor %}
     </ul>
