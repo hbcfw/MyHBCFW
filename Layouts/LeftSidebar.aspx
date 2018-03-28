@@ -2,14 +2,19 @@
 
 <asp:Content ID="ctMain" ContentPlaceHolderID="main" runat="server">
 
+    <!-- Page Title -->
+    <div id="banner">
+        <span class="overlay"></span>
+        <div class="banner-text">
+            <Rock:PageIcon ID="PageIcon" runat="server" /> <h1 class="pagetitle"><Rock:PageTitle ID="PageTitle" runat="server" /></h1>
+        </div><!-- .banner-text -->
+        <Rock:PageBreadCrumbs ID="PageBreadCrumbs" runat="server" />
+    </div><!-- #banner -->
+
     <main class="container">
                 
         <!-- Start Content Area -->
-        
-        <!-- Page Title -->
-        <Rock:PageIcon ID="PageIcon" runat="server" /> <h1 class="pagetitle"><Rock:PageTitle ID="PageTitle" runat="server" /></h1>
-        <Rock:PageBreadCrumbs ID="PageBreadCrumbs" runat="server" />
-                    
+
         <!-- Ajax Error -->
         <div class="alert alert-danger ajax-error" style="display:none">
             <p><strong>Error</strong></p>

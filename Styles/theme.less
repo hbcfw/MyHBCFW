@@ -68,7 +68,7 @@ header {
     }
 
     .navbar {
-        background-color: @header-bg;
+        background-color: #fff;
         border: 0;
     }
 }
@@ -190,3 +190,152 @@ footer {
 
 
 @import "_css-overrides.less";
+
+// 5. Custom Styling
+// -------------------------
+
+/*Fonts*/
+h1,h2,h3,h4,h5,h6,
+.btn,
+.navbar-nav,
+.nav-pills,
+#banner .breadcrumb,
+.panel-heading {
+    font-family: 'Montserrat', 'OpenSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body, p {
+    font-family: 'Lora', Georgia, serif;
+}
+
+body {
+    font-size: 16px;
+}
+
+/*Basic Elements*/
+p,
+dl {
+    font-size: 1.15em;
+}
+p,
+dd {
+    line-height: 1.6;
+}
+
+/*Bootstrap Elements*/
+.panel {
+    .panel-heading {
+        font-weight: 600;
+    }
+}
+
+/*Header*/
+header {
+    .navbar {
+        margin: 0;
+        padding: .5rem;
+        position: relative;
+    }
+    .navbar-collapse {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    #zone-navigation {
+        float: left;
+    }
+}
+#logo-primary {
+    width: 180px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #4a4a4a;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: .7rem 1rem;
+    font-size: 16px;
+
+    &:hover {
+        color: #358fcd;
+    }
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+    color: #358fcd;
+    background: transparent;
+}
+
+/*Page Banner*/
+#banner {
+    position: relative;
+    height: 33vh;
+    min-height: 180px;
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+
+    .overlay {
+        background: rgba(1, 108, 197, 0.75);
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .banner-text {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        z-index: 1;
+
+        .pagetitle {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+    .breadcrumb {
+        position: absolute;
+        bottom: 0px;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.25);
+        width: 100%;
+        color: #fff;
+        padding: 0px 0px 2px 1em;
+        font-size: 14px;
+        z-index: 1;
+        
+        li {
+            a {
+                color: #fff;
+            }
+            &.active {
+                color: #fff;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+/*Page Structure*/
+main.container {
+    padding-top: 2em;
+}
+
+/*Forms*/
+.form-group {
+    font-size: 1em;
+    line-height: 1.6;
+}
