@@ -3,13 +3,7 @@
 <asp:Content ID="ctMain" ContentPlaceHolderID="main" runat="server">
     
     <!-- Page Title -->
-    <div id="banner">
-            <span class="overlay"></span>
-            <div class="banner-text">
-                <Rock:PageIcon ID="PageIcon" runat="server" /> <h1 class="pagetitle"><Rock:PageTitle ID="PageTitle" runat="server" /></h1>
-            </div><!-- .banner-text -->
-            <Rock:PageBreadCrumbs ID="PageBreadCrumbs" runat="server" />
-        </div><!-- #banner -->
+    {% include '~~/Assets/Lava/PageBanner.lava' %}
 
 	<main class="container">
         
