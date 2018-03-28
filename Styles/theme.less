@@ -200,7 +200,11 @@ h1,h2,h3,h4,h5,h6,
 .navbar-nav,
 .nav-pills,
 #banner .breadcrumb,
-.panel-heading {
+.panel-heading,
+table thead,
+.grid-pagesize,
+.calendar-month table.calendar-title,
+th.calendar-day-header {
     font-family: 'Montserrat', 'OpenSans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body, p {
@@ -213,6 +217,8 @@ body {
 
 /*Basic Elements*/
 p,
+ul,
+ol,
 dl {
     font-size: 1.15em;
 }
@@ -223,7 +229,14 @@ dd {
 
 /*Bootstrap Elements*/
 .panel {
-    .panel-heading {
+    .panel-heading,
+    .panel-title {
+        font-weight: 600;
+    }
+}
+
+.well {
+    h3,h4 {
         font-weight: 600;
     }
 }
@@ -265,7 +278,8 @@ header {
 
 .navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:hover,
-.navbar-inverse .navbar-nav>.active>a:focus {
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>li>a:focus {
     color: #358fcd;
     background: transparent;
 }
@@ -338,4 +352,48 @@ main.container {
 .form-group {
     font-size: 1em;
     line-height: 1.6;
+}
+.form-control {
+    color: #000;
+    font-size: 1.15em;
+    line-height: 1.6;
+}
+
+/*Calendar*/
+.calendar-month{
+    .calendar-selected {
+        background-color: #4191d4 !important;
+    }
+    th.calendar-day-header {
+        font-size: 0.85em;
+    }
+}
+
+/*Responsive*/
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+    &:hover, &:focus {
+        background-color: transparent;
+        i.fa-bars {
+            color: #F8981D;
+        }
+    }
+}
+
+.navbar .navbar-toggle i.fa-bars {
+    color: #4191d4;
+    font-size: 2em;
+}
+
+@media (max-width: @screen-sm-min) {
+    header {
+        .navbar-collapse {
+            position: relative;
+            top: auto;
+            right: auto;
+            transform: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+        }
+    }
 }

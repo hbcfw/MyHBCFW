@@ -40,7 +40,7 @@
 
       {% if EventItemOccurrence.ContactPersonAliasId != null or EventItemOccurrence.ContactEmail != '' or EventItemOccurrence.ContactPhone != '' %}
       <p>
-        <strong>Contact</strong><br />
+        <h4>Contact</h4>
         {% if EventItemOccurrence.ContactPersonAliasId != null %}
         {{ EventItemOccurrence.ContactPersonAlias.Person.FullName }} <br />
         {% endif %}
@@ -55,13 +55,13 @@
 
       {% if EventItemOccurrence.Location != '' %}
       <p>
-        <strong> Location</strong> <br />
+        <h4>Location</h4>
         {{ EventItemOccurrence.Location }}
       </p>
       {% endif %}
 
       {% assign scheduledDates = EventItemOccurrence.Schedule.iCalendarContent | DatesFromICal:'all' %}
-      <strong>Date / Time</strong>
+      <h4>Date / Time</h4>
       <ul class="list-unstyled">
         {% for scheduledDate in scheduledDates %}
         <li>
@@ -71,7 +71,7 @@
       </ul>
 
       {% if EventItemOccurrence.Note != '' %}
-      <strong>Note</strong><br />
+      <h4>Note</h4>
       {{ EventItemOccurrence.Note }}
       {% endif %}
 
