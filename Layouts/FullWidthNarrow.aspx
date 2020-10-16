@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" Inherits="Rock.Web.UI.RockPage" %>
 
 <asp:Content ID="ctMain" ContentPlaceHolderID="main" runat="server">
-    
+
     <!-- Page Title -->
     <div id="banner">
         <span class="overlay"></span>
@@ -12,8 +12,8 @@
         </div><!-- .banner-text -->
         <Rock:PageBreadCrumbs ID="PageBreadCrumbs" runat="server" />
     </div><!-- #banner -->
-    
-    <main class="container">
+
+	<main class="container">
 
         <!-- Start Content Area -->
 
@@ -30,11 +30,8 @@
         </div>
 
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-8 col-md-offset-2">
                 <Rock:Zone Name="Main" runat="server" />
-            </div>
-            <div class="col-md-3">
-                <Rock:Zone Name="Sidebar 1" runat="server" />
             </div>
         </div>
 
@@ -58,6 +55,7 @@
 
         <!-- End Content Area -->
 
-    </main>
+	</main>
 
 </asp:Content>
+
